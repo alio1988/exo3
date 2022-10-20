@@ -1,0 +1,24 @@
+
+version: "3"
+services:
+  db:
+   image: mariadb:10.6
+   networks:
+     - monreseau 
+
+  
+  flask:
+
+    image: exo3/latest
+
+    ports:
+      - 5000:5000
+
+    depends_on:
+     - db
+    networks:
+     - monreseau
+
+
+networks:
+  monreseau:
