@@ -51,7 +51,7 @@ metadata:
 spec:
   containers:
   - name: mariadb-app
-    image: mariadb:10.6
+    image: mariadb:latest
     resources:
       requests:
         memory: "250Mi"
